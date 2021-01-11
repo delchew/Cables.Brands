@@ -8,6 +8,14 @@
     <Reference Include="Cables">
       <HintPath>..\..\SPCABLE\SPCable\Cables\bin\Debug\netstandard2.0\Cables.dll</HintPath>
     </Reference>
+    <Reference Include="Cables">
+      <HintPath>..\..\Cables\Cables\bin\Debug\netstandard2.0\Cables.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Skab\" />
+    <Folder Include="FireAlarmCables\" />
+  </ItemGroup>
 </Project>
