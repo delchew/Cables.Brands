@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cables.Brands", "Cables.Brands\Cables.Brands.csproj", "{7E841718-F5E2-44D4-A61B-C0981E8E9D73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E841718-F5E2-44D4-A61B-C0981E8E9D73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E841718-F5E2-44D4-A61B-C0981E8E9D73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E841718-F5E2-44D4-A61B-C0981E8E9D73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E841718-F5E2-44D4-A61B-C0981E8E9D73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E9F9C23-43A3-4E14-9FF4-B8DD3A3C647D}
+	EndGlobalSection
+EndGlobal
