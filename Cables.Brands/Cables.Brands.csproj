@@ -4,4 +4,10 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="Cables">
+      <HintPath>..\..\SPCABLE\SPCable\Cables\bin\Debug\netstandard2.0\Cables.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
