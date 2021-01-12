@@ -2,6 +2,6 @@
 {
     public interface IWaterBlockingElements
     {
-        public bool HasWaterBlockingElements { get; set; }
+        bool HasWaterBlockingElements { get; set; }
     }
 }

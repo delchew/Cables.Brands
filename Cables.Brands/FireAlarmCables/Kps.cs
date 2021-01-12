@@ -2,7 +2,7 @@
 
 namespace Cables.Brands.FireAlarmCables
 {
-    public class Kpsv : Cable, ISingleConstruction, IFoilShield, IArmoured
+    public class Kps : Cable, ISingleConstruction, IMicable, IFoilShield
     {
         public ConductingCore ConductingCore { get; set; }
 
@@ -10,10 +10,8 @@ namespace Cables.Brands.FireAlarmCables
 
         public TwistedElementType CoreTwistType { get; set; }
 
+        public bool HasMica { get; set; }
+
         public bool HasFoilShield { get; set; }
-
-        public bool HasArmor { get; set; }
-
-        public bool HasArmorTube { get; set; }
     }
 }
