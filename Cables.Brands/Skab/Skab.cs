@@ -34,6 +34,6 @@ namespace Cables.Brands.Skab
 
         public bool HasArmorTube { get; set; }
 
-        //public double MaxCableDiameter { get; set; }
+
     }
 }

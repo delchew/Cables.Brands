@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cables.Brands.Database\Cables.Brands.Database.csproj" />
+    <ProjectReference Include="..\Cables.Brands\Cables.Brands.csproj" />
+  </ItemGroup>
+
+</Project>

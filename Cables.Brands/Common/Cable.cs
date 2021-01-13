@@ -9,5 +9,7 @@
         public string TechnicalSpecifications { get; set; }
 
         public FireProtectionClass FireProtectionClass { get; set; }
+
+        public double? MaxCableDiameter { get; set; }
     }
 }

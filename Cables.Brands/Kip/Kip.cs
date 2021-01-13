@@ -1,6 +1,6 @@
 ﻿using Cables.Brands.Common;
 
-namespace Cables.Brands
+namespace Cables.Brands.Kip
 {
     public class Kip : Cable, ISingleConstruction, IShield, IArmoured
     {
