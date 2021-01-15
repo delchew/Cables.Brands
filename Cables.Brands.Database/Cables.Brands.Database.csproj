@@ -5,11 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FirebirdSql.EntityFrameworkCore.Firebird" Version="7.10.1" />
+    <PackageReference Include="EntityFrameworkCore.FirebirdSQL" Version="2.1.2.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Cables.Brands\Cables.Brands.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="AppSettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
