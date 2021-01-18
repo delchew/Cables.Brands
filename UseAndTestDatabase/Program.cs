@@ -9,6 +9,11 @@ namespace UseAndTestDatabase
     {
         static void Main(string[] args)
         {
+            using (var dbContext = new CablesDatabaseContext());
+        }
+
+        static void TestHowDatabaseWorking()
+        {
             using (var dbContext = new CablesDatabaseContext())
             {
                 var class1 = new FireProtectionClass { Designation = "", ProtectionClass = "О.1.8.2.5.4" };
@@ -21,7 +26,7 @@ namespace UseAndTestDatabase
                 Console.WriteLine("Sucsessfully saved!" + Environment.NewLine);
 
                 var firstClass = dbContext.FireProtectionClasses.FirstOrDefault();
-                if(firstClass != null)
+                if (firstClass != null)
                 {
                     firstClass.ProtectionClass = "22";
                     firstClass.Designation = "22";
