@@ -2,7 +2,7 @@
 {
     public interface IArmoured
     {
-        bool HasArmor { get; set; }
+        bool HasArmorBraid { get; set; }
 
         bool HasArmorTube { get; set; }
     }

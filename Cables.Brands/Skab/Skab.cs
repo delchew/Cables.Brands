@@ -6,34 +6,23 @@ namespace Cables.Brands.Skab
     {
         public SkabVoltageType VoltageType { get; set; }
 
-        public bool SparkSafety { get; set; }
+
+        public bool HasIndividualFoilShields { get; set; } //public bool HasIndividualFoilShields { get; set; }
+
+        public bool HasFoilShield { get; set; } //public bool HasFoilShield { get; set; }
+
+        public bool HasBraidShield { get; set; } //public bool HasBraidShield { get; set; }
+
+        public bool HasFilling { get; set; } //public bool HasFilling { get; set; }
 
 
-        public ConductingCore ConductingCore { get; set; }
+        public bool HasArmorBraid { get; set; } //public bool HasArmourBraid { get; set; }
 
-        public int ElementsCount { get; set; }
+        public bool HasArmorTube { get; set; } //public bool HasArmourTube { get; set; }
 
-        public TwistedElementType CoreTwistType { get; set; }
+        public bool HasWaterBlockingElements { get; set; } //public bool HasWaterBlockStripe { get; set; }
 
-
-        public bool HasIndividualFoilShields { get; set; }
-
-        public bool HasFoilShield { get; set; }
-
-        public bool HasBraidingShield { get; set; }
-
-        public bool HasContactWire { get; set; }
-
-
-        public bool HasWaterBlockingElements { get; set; }
-
-        public bool HasFilling { get; set; }
-
-
-        public bool HasArmor { get; set; }
-
-        public bool HasArmorTube { get; set; }
-
+        public bool SparkSafety { get; set; } //public bool SparkSafety { get; set; }
 
     }
 }
