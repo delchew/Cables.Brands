@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Cables.Brands.Database\Cables.Brands.Database.csproj" />
-    <ProjectReference Include="..\Cables.Brands\Cables.Brands.csproj" />
   </ItemGroup>
 
 </Project>
