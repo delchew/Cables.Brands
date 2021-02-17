@@ -15,34 +15,34 @@ namespace UseAndTestDatabase
         {
             using (var dbContext = new CablesDatabaseContext())
             {
-                //var class1 = new FireProtectionClass { Designation = "", ProtectionClass = "О.1.8.2.5.4" };
-                //var class2 = new FireProtectionClass { Designation = "нг(А)-LS", ProtectionClass = "П.1б.8.2.2.2" };
-                //var class3 = new FireProtectionClass { Designation = "нг(А)-FRHF", ProtectionClass = "П.1б.1.2.1.2" };
+                var met1 = new Metal { MetalName = "медь", Density20 = 8890 };
+                var met2 = new Metal { MetalName = "сталь", Density20 = 7800 };
+                var met3 = new Metal { MetalName = "медь луженая", Density20 = 8890 };
 
-                //dbContext.FireProtectionClasses.Add(class1); //добавить 1 запись
-                //dbContext.FireProtectionClasses.AddRange(class2, class3); //Добавить несколько записей
-                //dbContext.SaveChanges();
-                //Console.WriteLine("Sucsessfully saved!" + Environment.NewLine);
+                dbContext.Metals.Add(met1); //добавить 1 запись
+                dbContext.Metals.AddRange(met2, met3); //Добавить несколько записей
+                dbContext.SaveChanges();
+                Console.WriteLine("Sucsessfully saved!" + Environment.NewLine);
 
-                //var firstClass = dbContext.FireProtectionClasses.FirstOrDefault();
-                //if (firstClass != null)
-                //{
-                //    firstClass.ProtectionClass = "22";
-                //    firstClass.Designation = "22";
-                //    dbContext.Update(firstClass); //обновляем конкретный объект
+                var met = dbContext.Metals.FirstOrDefault();
+                if (met != null)
+                {
+                    met.MetalName = "new";
+                    met.Density20 = 1000;
+                    dbContext.Update(met); //обновляем конкретный объект
 
-                //    dbContext.Remove(firstClass); //Удаляем конкретный объект 
-                //    dbContext.SaveChanges(); //Внести обновления в базу после изменений
-                //}
+                    //dbContext.Remove(met); //Удаляем конкретный объект 
+                    dbContext.SaveChanges(); //Внести обновления в базу после изменений
+                }
 
-                //var item = dbContext.Metals.Where(i => i.Id == 2).FirstOrDefault();
-                //if (item != null)
-                //{
-                //    dbContext.Remove(item);
-                //    dbContext.SaveChanges();
-                //}
-                //else
-                //    Console.WriteLine("Записи не существует!");
+                var item = dbContext.Metals.Where(i => i.Id == 2).FirstOrDefault();
+                if (item != null)
+                {
+                    dbContext.Remove(item);
+                    dbContext.SaveChanges();
+                }
+                else
+                    Console.WriteLine("Записи не существует!");
 
                 var classes = dbContext.Metals.ToList(); // получить все записи из таблицы
                 Console.WriteLine("Metals:");

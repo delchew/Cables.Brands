@@ -19,7 +19,7 @@ namespace Cables.Brands.Database
             builder.SetBasePath(Directory.GetCurrentDirectory());
             builder.AddJsonFile("AppSettings.json");
             var config = builder.Build();
-            var connectionString = config.GetConnectionString("MacBookConnection");
+            var connectionString = config.GetConnectionString("DefaultConnection");
 
             optionsBuilder.UseFirebird(connectionString);
         }
