@@ -4,11 +4,11 @@ using System.IO;
 
 namespace Cables.Brands.Database
 {
-    public class CablesDatabaseContext : DbContext
+    public class CableContext : DbContext
     {
         public DbSet<Metal> Metals { get; set; }
 
-        public CablesDatabaseContext()
+        public CableContext()
         {
             Database.EnsureCreated();
         }

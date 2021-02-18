@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cables.Brands.Database", "Cables.Brands.Database\Cables.Brands.Database.csproj", "{0A8269B1-A746-491B-ABC2-59CFF1FD2C46}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UseAndTestDatabase", "UseAndTestDatabase\UseAndTestDatabase.csproj", "{48F43F95-9A51-4823-AF67-503B52E1DFAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CablesDatabaseEFCoreFirebird", "CablesDatabaseEFCoreFirebird\CablesDatabaseEFCoreFirebird.csproj", "{0A59D7F5-39FC-4FD1-8B11-C6031ECE8F8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CablesDatabaseEFCoreFirebird", "CablesDatabaseEFCoreFirebird\CablesDatabaseEFCoreFirebird.csproj", "{0A59D7F5-39FC-4FD1-8B11-C6031ECE8F8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0A8269B1-A746-491B-ABC2-59CFF1FD2C46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0A8269B1-A746-491B-ABC2-59CFF1FD2C46}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0A8269B1-A746-491B-ABC2-59CFF1FD2C46}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0A8269B1-A746-491B-ABC2-59CFF1FD2C46}.Release|Any CPU.Build.0 = Release|Any CPU
 		{48F43F95-9A51-4823-AF67-503B52E1DFAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{48F43F95-9A51-4823-AF67-503B52E1DFAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48F43F95-9A51-4823-AF67-503B52E1DFAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
