@@ -12,6 +12,7 @@ namespace UseAndTestDatabase
             {
                 var classes = dbcontext.Metals.ToList(); // получить все записи из таблицы
                 Console.WriteLine("Metals:");//Выводим все данные из таблицы
+                var conds = classes[0].Conductors;
                 foreach (var cl in classes)
                 {
                     Console.WriteLine($"{cl.Id}: {cl.MetalName} - {cl.Density20}");
@@ -21,9 +22,14 @@ namespace UseAndTestDatabase
                 Console.WriteLine("Conductors:");//Выводим все данные из таблицы
                 foreach (var cond in conductors)
                 {
-                    Console.WriteLine($"{cond.Id}: {cond.Title} - {cond.WiresCount}х{cond.WiresDiameter} - {cond.AreaInSqrMm}мм");
+                    Console.WriteLine($"{cond.Id}: {cond.Title} - {cond.WiresCount}х{cond.WiresDiameter} - {cond.AreaInSqrMm}мм - {cond.Metal.MetalName}");
                 }
-                Console.ReadKey();
+                var cables = dbcontext.Cables.ToList();
+                Console.WriteLine("Cables:");//Выводим все данные из таблицы
+                foreach (var c in cables)
+                {
+                    Console.WriteLine($"{c.Id}: {c.Title}");
+                }
             }
         }
 
@@ -59,15 +65,6 @@ namespace UseAndTestDatabase
             //    }
             //    else
             //        Console.WriteLine("Записи не существует!");
-
-            //    var classes = dbContext.Metals.ToList(); // получить все записи из таблицы
-            //    Console.WriteLine("Metals:");
-            //    //Выводим все данные из таблицы
-            //    foreach (var cl in classes)
-            //    {
-            //        Console.WriteLine($"{cl.Id}: {cl.MetalName} - {cl.Density20}");
-            //    }
-            //    Console.ReadKey();
             //}
         }
     }

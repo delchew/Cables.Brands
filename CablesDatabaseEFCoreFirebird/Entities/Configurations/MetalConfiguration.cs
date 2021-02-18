@@ -9,11 +9,11 @@ namespace CablesDatabaseEFCoreFirebird.Entities.Configurations
         {
             builder.ToTable("METAL");
 
-            builder.Property(m => m.Id).HasColumnName("ID").HasColumnType("INTEGER").IsRequired().HasDefaultValue(0);
-            builder.HasKey(u => u.Id);
+            builder.Property(m => m.Id).HasColumnName("ID").HasColumnType("INTEGER").IsRequired();
+            builder.HasKey(m => m.Id);
 
-            builder.Property(m => m.MetalName).HasColumnName("METAL_NAME").HasColumnType("VARCHAR(30)").HasDefaultValue();
-            builder.Property(m => m.Density20).HasColumnName("DENSITY_20").HasColumnType("INTEGER").IsRequired().HasDefaultValue(0);
+            builder.Property(m => m.MetalName).HasColumnName("METAL_NAME").HasColumnType("VARCHAR(30)");
+            builder.Property(m => m.Density20).HasColumnName("DENSITY_20").HasColumnType("INTEGER").IsRequired();
         }
     }
 }
