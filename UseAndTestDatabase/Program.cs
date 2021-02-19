@@ -1,4 +1,5 @@
 ﻿using CablesDatabaseEFCoreFirebird;
+using CablesDatabaseEFCoreFirebird.Entities;
 using System;
 using System.Linq;
 
@@ -8,64 +9,95 @@ namespace UseAndTestDatabase
     {
         static void Main(string[] args)
         {
+            RemoveFromTwistedElementsType();
+        }
+
+        static void UpdateTwistedElementsType()
+        {
+            using (var dbContext = new CablesContext())
+            {
+                var typesList = dbContext.TwistedElementTypes.Where(t => t.ElementType.ToUpper().Contains("TEST"))
+                                                               .ToList();
+                foreach (var type in typesList)
+                {
+                    if (type != null)
+                    {
+                        type.ElementType = "NEW Value=))";
+                        dbContext.Update(type);
+                    }
+                }
+                dbContext.SaveChanges();
+            }
+        }
+
+        static void RemoveFromTwistedElementsType()
+        {
+            using (var dbContext = new CablesContext())
+            {
+                var typesList = dbContext.TwistedElementTypes.Where(t => t.ElementType.ToUpper().Contains("VAL"))
+                                                               .ToList();
+                foreach (var type in typesList)
+                {
+                    if(type != null)
+                        dbContext.Remove(type);
+                }
+                dbContext.SaveChanges();
+            }
+        }
+
+        static void InsertIntoTwistedElemetsType()
+        {
+            using(var dbContext = new CablesContext())
+            {
+                var elType = new TwistedElementType { ElementType = "six! Test" };
+                var elType1 = new TwistedElementType { ElementType = "seven! Test" };
+                var elType2 = new TwistedElementType { ElementType = "eight! Test" };
+                dbContext.TwistedElementTypes.Add(elType);
+                dbContext.TwistedElementTypes.AddRange(elType1, elType2);
+                dbContext.SaveChanges();
+            }
+        }
+
+        static void PrintMetals()
+        {
             using (var dbcontext = new CablesContext())
             {
-                var classes = dbcontext.Metals.ToList(); // получить все записи из таблицы
-                Console.WriteLine("Metals:");//Выводим все данные из таблицы
-                var conds = classes[0].Conductors;
-                foreach (var cl in classes)
+                var metals = dbcontext.Metals.ToList();
+                Console.WriteLine("Metals:");
+                foreach (var m in metals)
                 {
-                    Console.WriteLine($"{cl.Id}: {cl.MetalName} - {cl.Density20}");
+                    Console.WriteLine($"{m.Id}: {m.MetalName} - {m.Density20}");
                 }
+            }
+        }
 
+        static void PrintConductors()
+        {
+            using (var dbcontext = new CablesContext())
+            {
                 var conductors = dbcontext.Conductors.Where(c => c.AreaInSqrMm == 0.75m).ToList();
-                Console.WriteLine("Conductors:");//Выводим все данные из таблицы
-                foreach (var cond in conductors)
+                Console.WriteLine("Conductors:");
+                foreach (var r in conductors)
                 {
-                    Console.WriteLine($"{cond.Id}: {cond.Title} - {cond.WiresCount}х{cond.WiresDiameter} - {cond.AreaInSqrMm}мм - {cond.Metal.MetalName}");
+                    Console.WriteLine($"{r.Id}: {r.Title} - {r.WiresCount}х{r.WiresDiameter} - {r.AreaInSqrMm}мм - {r.Metal.MetalName}");
                 }
-                var cables = dbcontext.Cables.ToList();
-                Console.WriteLine("Cables:");//Выводим все данные из таблицы
+            }
+        }
+
+        static void PrintCablesInfo()
+        {
+            using (var dbcontext = new CablesContext())
+            {
+                var cables = dbcontext.Cables.Where(c => c.MaxCoverDiameter < 13 && 
+                                                         c.Title.StartsWith("СКАБ 250У") &&
+                                                         c.ElementsCount < 5)
+                                             .ToList();
+                Console.WriteLine("Cables:");
                 foreach (var c in cables)
                 {
                     Console.WriteLine($"{c.Id}: {c.Title}");
                 }
             }
-        }
-
-        static void TestHowDatabaseWorking()
-        {
-            //using (var dbContext = new Cables.Brands.Database.CableContext())
-            //{
-            //    var met1 = new Metal { MetalName = "медь", Density20 = 8890 };
-            //    var met2 = new Metal { MetalName = "сталь", Density20 = 7800 };
-            //    var met3 = new Metal { MetalName = "медь луженая", Density20 = 8890 };
-
-            //    dbContext.Metals.Add(met1); //добавить 1 запись
-            //    dbContext.Metals.AddRange(met2, met3); //Добавить несколько записей
-            //    dbContext.SaveChanges();
-            //    Console.WriteLine("Sucsessfully saved!" + Environment.NewLine);
-
-            //    var met = dbContext.Metals.FirstOrDefault();
-            //    if (met != null)
-            //    {
-            //        met.MetalName = "new";
-            //        met.Density20 = 1000;
-            //        dbContext.Update(met); //обновляем конкретный объект
-
-            //        //dbContext.Remove(met); //Удаляем конкретный объект 
-            //        dbContext.SaveChanges(); //Внести обновления в базу после изменений
-            //    }
-
-            //    var item = dbContext.Metals.Where(i => i.Id == 2).FirstOrDefault();
-            //    if (item != null)
-            //    {
-            //        dbContext.Remove(item);
-            //        dbContext.SaveChanges();
-            //    }
-            //    else
-            //        Console.WriteLine("Записи не существует!");
-            //}
         }
     }
 }

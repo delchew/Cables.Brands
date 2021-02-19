@@ -1,4 +1,6 @@
-﻿namespace CablesDatabaseEFCoreFirebird.Entities
+﻿using System.Collections.Generic;
+
+namespace CablesDatabaseEFCoreFirebird.Entities
 {
     public class Conductor
     {
@@ -7,6 +9,8 @@
         public string Title { get; set; }
 
         public int WiresCount { get; set; }
+
+        public int MetalId { get; set; }
 
         public int Class { get; set; }
 
@@ -17,9 +21,8 @@
         public decimal AreaInSqrMm { get; set; }
 
 
-        public int MetalId { get; set; } // внешний ключ
+        public Metal Metal { get; set; }
 
-        public Metal Metal { get; set; } // навигационное свойство
-
+        public List<InsulatedBillet> InsulatedBillets { get; set; }
     }
 }

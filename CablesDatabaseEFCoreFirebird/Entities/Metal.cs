@@ -11,6 +11,6 @@ namespace CablesDatabaseEFCoreFirebird.Entities
         public int Density20 { get; set; }
 
 
-        public List<Conductor> Conductors { get; set; } // навигационное свойство
+        public List<Conductor> Conductors { get; set; }
     }
 }

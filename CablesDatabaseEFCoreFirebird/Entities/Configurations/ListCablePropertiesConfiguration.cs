@@ -13,7 +13,10 @@ namespace CablesDatabaseEFCoreFirebird.Entities.Configurations
             builder.HasKey(l => l.Id);
 
             builder.Property(l => l.CableId).HasColumnName("CABLE_ID").HasColumnType("INTEGER").IsRequired();
+            builder.HasOne(l => l.Cable).WithMany(c => c.ListCableProperties).HasForeignKey(l => l.CableId);
+
             builder.Property(l => l.PropertyId).HasColumnName("PROPERTY_ID").HasColumnType("INTEGER").IsRequired();
+            builder.HasOne(l => l.Property).WithMany(p => p.ListCableProperties).HasForeignKey(l => l.PropertyId);
         }
     }
 }
