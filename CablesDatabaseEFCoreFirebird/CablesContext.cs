@@ -1,6 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using System.IO;
 using CablesDatabaseEFCoreFirebird.Entities;
 using CablesDatabaseEFCoreFirebird.Entities.Configurations;
 
@@ -8,6 +6,8 @@ namespace CablesDatabaseEFCoreFirebird
 {
     public class CablesContext : DbContext
     {
+        private string _connectionString;
+
         public DbSet<Cable> Cables { get; set; }
         public DbSet<CableProperty> CableProperties { get; set; }
         public DbSet<CableShortName> CableShortNames { get; set; }
@@ -26,15 +26,14 @@ namespace CablesDatabaseEFCoreFirebird
         public DbSet<TwistedElementType> TwistedElementTypes { get; set; }
         public DbSet<TwistInfo>TwistInfos { get; set; }
 
+        public CablesContext(string connectionString)
+        {
+            _connectionString = connectionString;
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var builder = new ConfigurationBuilder();
-            builder.SetBasePath(Directory.GetCurrentDirectory());
-            builder.AddJsonFile("AppSettings.json");
-            var config = builder.Build();
-            var connectionString = config.GetConnectionString("DefaultConnection");
-
-            optionsBuilder.UseFirebird(connectionString);
+            optionsBuilder.UseFirebird(_connectionString);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
