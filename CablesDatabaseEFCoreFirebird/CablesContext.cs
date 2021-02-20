@@ -44,9 +44,9 @@ namespace CablesDatabaseEFCoreFirebird
             modelBuilder.ApplyConfiguration(new CableShortNameConfiguration());
             modelBuilder.ApplyConfiguration(new ClimaticModConfiguration());
             modelBuilder.ApplyConfiguration(new ColorConfiguration());
-            modelBuilder.ApplyConfiguration(new CableShortNameConfiguration());
             modelBuilder.ApplyConfiguration(new ConductorConfiguration());
             modelBuilder.ApplyConfiguration(new FireProtectionClassConfiguration());
+            modelBuilder.ApplyConfiguration(new InsulatedBilletConfiguration());
             modelBuilder.ApplyConfiguration(new ListCablePowerColorConfiguration());
             modelBuilder.ApplyConfiguration(new ListCablePropertiesConfiguration());
             modelBuilder.ApplyConfiguration(new MetalConfiguration());

@@ -28,7 +28,6 @@ namespace CablesDatabaseEFCoreFirebird.Entities.Configurations
             builder.Property(b => b.NominalThickness).HasColumnName("NOMINAL_THICKNESS").HasColumnType("NUMERIC(2, 2)");
 
             builder.Property(b => b.CableShortNameId).HasColumnName("CABLE_SHORT_NAME_ID").HasColumnType("INTEGER").IsRequired();
-            builder.Property(b => b.CableShortNameId).HasColumnName("CABLE_SHORT_NAME_ID").HasColumnType("INTEGER").IsRequired();
             builder.HasOne(b => b.CableShortName).WithMany(c => c.InsulatedBillets).HasForeignKey(b => b.CableShortNameId);
         }
     }
