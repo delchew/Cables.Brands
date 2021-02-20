@@ -23,7 +23,7 @@ namespace CablesDatabaseEFCoreFirebird.Entities.Configurations
 
             builder.Property(b => b.Diameter).HasColumnName("DIAMETER").HasColumnType("NUMERIC(3, 2)").IsRequired();
 
-            builder.Property(b => b.MinThickness).HasColumnName("MIN_THICKNESS").HasColumnType("NUMERIC(2, 2)").IsRequired();
+            builder.Property(b => b.MinThickness).HasColumnName("MIN_THICKNESS").HasColumnType("NUMERIC(2, 2)");
 
             builder.Property(b => b.NominalThickness).HasColumnName("NOMINAL_THICKNESS").HasColumnType("NUMERIC(2, 2)");
 

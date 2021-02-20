@@ -14,9 +14,9 @@ namespace CablesDatabaseEFCoreFirebird.Entities
 
         public decimal Diameter { get; set; }
 
-        public decimal MinThickness { get; set; }
+        public decimal? MinThickness { get; set; }
 
-        public decimal NominalThickness { get; set; }
+        public decimal? NominalThickness { get; set; }
 
         public int CableShortNameId { get; set; }
 

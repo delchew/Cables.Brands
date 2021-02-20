@@ -22,7 +22,7 @@ namespace CablesDatabaseEFCoreFirebird.Entities
 
         public int CoverColorId { get; set; }
 
-        public decimal MaxCoverDiameter { get; set; }
+        public decimal? MaxCoverDiameter { get; set; }
 
         public int ClimaticModId { get; set; }
 
