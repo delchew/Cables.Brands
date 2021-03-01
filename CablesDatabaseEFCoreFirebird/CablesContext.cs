@@ -16,6 +16,7 @@ namespace CablesDatabaseEFCoreFirebird
         public DbSet<Conductor> Conductors { get; set; }
         public DbSet<FireProtectionClass> FireProtectionClasses { get; set; }
         public DbSet<InsulatedBillet> InsulatedBillets { get; set; }
+        public DbSet<ListCableBillets> ListCableBillets { get; set; }
         public DbSet<ListCablePowerColor> ListCablePowerColors { get; set; }
         public DbSet<ListCableProperties> ListCableProperties { get; set; }
         public DbSet<Metal> Metals { get; set; }
