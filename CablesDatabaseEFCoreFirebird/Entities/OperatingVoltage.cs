@@ -10,7 +10,7 @@ namespace CablesDatabaseEFCoreFirebird.Entities
 
         public int ACFriquency { get; set; }
 
-        public int DCVoltage { get; set; }
+        public int? DCVoltage { get; set; }
 
         public string Description { get; set; }
 
