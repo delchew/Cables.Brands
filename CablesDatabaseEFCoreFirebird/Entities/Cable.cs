@@ -8,8 +8,6 @@ namespace CablesDatabaseEFCoreFirebird.Entities
 
         public string Title { get; set; }
 
-        public int BilletId { get; set; }
-
         public int ElementsCount { get; set; }
 
         public int TwistedElementTypeId { get; set; }
@@ -29,8 +27,6 @@ namespace CablesDatabaseEFCoreFirebird.Entities
         public int OperatingVoltageId { get; set; }
 
 
-        public InsulatedBillet InsulatedBillet { get; set; }
-
         public TwistedElementType TwistedElementType { get; set; }
 
         public TechnicalConditions TechnicalConditions { get; set; }
@@ -46,6 +42,8 @@ namespace CablesDatabaseEFCoreFirebird.Entities
         public OperatingVoltage OperatingVoltage { get; set; }
 
 
+        public List<ListCableBillets> ListCableBillets { get; set; }
+        
         public List<ListCablePowerColor> ListCablePowerColors { get; set; }
 
         public List<ListCableProperties> ListCableProperties { get; set; }

@@ -30,6 +30,6 @@ namespace CablesDatabaseEFCoreFirebird.Entities
         public CableShortName CableShortName { get; set; }
 
 
-        public List<Cable> Cables { get; set; }
+        public List<ListCableBillets> ListCableBillets { get; set; }
     }
 }
