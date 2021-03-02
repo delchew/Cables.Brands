@@ -8,6 +8,8 @@ namespace CablesDatabaseEFCoreFirebird.Entities
 
         public string PropertyInfo { get; set; }
 
+        public int BitNumber { get; set; }
+
 
         public List<ListCableProperties> ListCableProperties { get; set; }
 

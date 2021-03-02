@@ -13,6 +13,8 @@ namespace CablesDatabaseEFCoreFirebird.Entities.Configurations
             builder.HasKey(c => c.Id);
 
             builder.Property(c => c.PropertyInfo).HasColumnName("PROPERTY_INFO").HasColumnType("VARCHAR(50)").IsRequired();
+
+            builder.Property(c =>c.BitNumber).HasColumnName("BIT_NUMBER").HasColumnType("INTEGER").IsRequired();
         }
     }
 }
