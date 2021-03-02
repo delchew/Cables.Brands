@@ -8,7 +8,7 @@ namespace CablesDatabaseEFCoreFirebird.Entities
 
         public string Title { get; set; }
 
-        public int ElementsCount { get; set; }
+        public decimal ElementsCount { get; set; }
 
         public int TwistedElementTypeId { get; set; }
 

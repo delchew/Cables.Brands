@@ -14,7 +14,7 @@ namespace CablesDatabaseEFCoreFirebird.Entities.Configurations
 
             builder.Property(c => c.Title).HasColumnName("TITLE").HasColumnType("VARCHAR(50)").IsRequired();
 
-            builder.Property(c => c.ElementsCount).HasColumnName("ELEMENTS_COUNT").HasColumnType("INTEGER").IsRequired();
+            builder.Property(c => c.ElementsCount).HasColumnName("ELEMENTS_COUNT").HasColumnType("NUMERIC(3, 1)").IsRequired();
 
             builder.Property(c => c.TwistedElementTypeId).HasColumnName("TWISTED_ELEMENT_TYPE_ID").HasColumnType("INTEGER").IsRequired();
             builder.HasOne(c => c.TwistedElementType).WithMany(t => t.Cables).HasForeignKey(c => c.TwistedElementTypeId);
