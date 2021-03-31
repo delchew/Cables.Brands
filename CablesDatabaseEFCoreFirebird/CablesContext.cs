@@ -15,6 +15,7 @@ namespace CablesDatabaseEFCoreFirebird
         public DbSet<Color> Colors { get; set; }
         public DbSet<Conductor> Conductors { get; set; }
         public DbSet<FireProtectionClass> FireProtectionClasses { get; set; }
+        public DbSet<FlatCableSize> FlatCableSizes { get; set; }
         public DbSet<InsulatedBillet> InsulatedBillets { get; set; }
         public DbSet<ListCableBillets> ListCableBillets { get; set; }
         public DbSet<ListCablePowerColor> ListCablePowerColors { get; set; }
@@ -46,6 +47,7 @@ namespace CablesDatabaseEFCoreFirebird
             modelBuilder.ApplyConfiguration(new ColorConfiguration());
             modelBuilder.ApplyConfiguration(new ConductorConfiguration());
             modelBuilder.ApplyConfiguration(new FireProtectionClassConfiguration());
+            modelBuilder.ApplyConfiguration(new FlatCableSizeConfiguration());
             modelBuilder.ApplyConfiguration(new InsulatedBilletConfiguration());
             modelBuilder.ApplyConfiguration(new ListCablePowerColorConfiguration());
             modelBuilder.ApplyConfiguration(new ListCablePropertiesConfiguration());

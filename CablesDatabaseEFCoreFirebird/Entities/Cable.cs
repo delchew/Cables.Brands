@@ -47,5 +47,8 @@ namespace CablesDatabaseEFCoreFirebird.Entities
         public List<ListCablePowerColor> ListCablePowerColors { get; set; }
 
         public List<ListCableProperties> ListCableProperties { get; set; }
+
+
+        public FlatCableSize FlatCableSize { get; set; }
     }
 }
