@@ -2,11 +2,11 @@
 
 namespace CablesDatabaseEFCoreFirebird.Entities
 {
-    public class CableShortName
+    public class CableBrandName
     {
         public int Id { get; set; }
 
-        public string ShortName { get; set; }
+        public string BrandName { get; set; }
 
         public List<InsulatedBillet> InsulatedBillets { get; set; }
     }

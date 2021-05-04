@@ -18,7 +18,7 @@ namespace CablesDatabaseEFCoreFirebird.Entities
 
         public decimal? NominalThickness { get; set; }
 
-        public int CableShortNameId { get; set; }
+        public int CableBrandNameId { get; set; }
 
 
         public Conductor Conductor { get; set; }
@@ -27,7 +27,7 @@ namespace CablesDatabaseEFCoreFirebird.Entities
 
         public OperatingVoltage OperatingVoltage { get; set; }
 
-        public CableShortName CableShortName { get; set; }
+        public CableBrandName CableBrandName { get; set; }
 
 
         public List<ListCableBillets> ListCableBillets { get; set; }

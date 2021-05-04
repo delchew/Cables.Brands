@@ -3,16 +3,16 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CablesDatabaseEFCoreFirebird.Entities.Configurations
 {
-    public class CableShortNameConfiguration : IEntityTypeConfiguration<CableShortName>
+    public class CableBrandNameConfiguration : IEntityTypeConfiguration<CableBrandName>
     {
-        public void Configure(EntityTypeBuilder<CableShortName> builder)
+        public void Configure(EntityTypeBuilder<CableBrandName> builder)
         {
-            builder.ToTable("CABLE_SHORT_NAME");
+            builder.ToTable("CABLE_BRAND_NAME");
 
             builder.Property(c => c.Id).HasColumnName("ID").HasColumnType("INTEGER").IsRequired();
             builder.HasKey(c => c.Id);
 
-            builder.Property(c => c.ShortName).HasColumnName("SHORT_NAME").HasColumnType("VARCHAR(50)").IsRequired();
+            builder.Property(c => c.BrandName).HasColumnName("BRAND_NAME").HasColumnType("VARCHAR(50)").IsRequired();
         }
     }
 }

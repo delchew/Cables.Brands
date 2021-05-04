@@ -10,7 +10,7 @@ namespace CablesDatabaseEFCoreFirebird
 
         public DbSet<Cable> Cables { get; set; }
         public DbSet<CableProperty> CableProperties { get; set; }
-        public DbSet<CableShortName> CableShortNames { get; set; }
+        public DbSet<CableBrandName> CableBrandNames { get; set; }
         public DbSet<ClimaticMod> ClimaticMods { get; set; }
         public DbSet<Color> Colors { get; set; }
         public DbSet<Conductor> Conductors { get; set; }
@@ -42,7 +42,7 @@ namespace CablesDatabaseEFCoreFirebird
         {
             modelBuilder.ApplyConfiguration(new CableConfiguration());
             modelBuilder.ApplyConfiguration(new CablePropertyConfiguration());
-            modelBuilder.ApplyConfiguration(new CableShortNameConfiguration());
+            modelBuilder.ApplyConfiguration(new CableBrandNameConfiguration());
             modelBuilder.ApplyConfiguration(new ClimaticModConfiguration());
             modelBuilder.ApplyConfiguration(new ColorConfiguration());
             modelBuilder.ApplyConfiguration(new ConductorConfiguration());

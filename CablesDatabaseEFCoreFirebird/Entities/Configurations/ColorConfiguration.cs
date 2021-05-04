@@ -14,6 +14,7 @@ namespace CablesDatabaseEFCoreFirebird.Entities.Configurations
 
             builder.Property(c => c.Title).HasColumnName("COLOR_NAME").HasColumnType("VARCHAR(20)").IsRequired();
             builder.Property(c => c.TitleRus).HasColumnName("COLOR_NAME_RUS").HasColumnType("VARCHAR(20)").IsRequired();
+            builder.Property(c => c.BitNumber).HasColumnName("BIT_NUMBER").HasColumnType("INTEGER").IsRequired();
         }
     }
 }
